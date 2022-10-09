@@ -1,0 +1,46 @@
+let searchMood = 'title';
+
+function getSearchMood(id){
+  let search =document.getElementById('search');
+  if(id=='searchTitle'){
+    searchMood ='title';
+    search.placeholder='Search By Title';
+  }else{
+    searchMood='Category';
+    search.placeholder='Search By Category';
+
+  }
+  search.focus();
+}
+
+function serachData(value){
+  let tabel='';
+   if(searchMood=='title'){
+   for(let i = 0; i<dataPro.length ; i++){
+      if(dataPro[i].country.includes(value)){
+        tabel +=`
+        <tr>
+                            <td>${i}</td>
+                            <td>${dataPro[i].country}</td>
+                            <td>${dataPro[i].hodNum}</td>
+                            <td>${dataPro[i].hodName}</td>
+                            <td>${dataPro[i].plateNum}</td>
+                            <td>${dataPro[i].peciesNum}</td>
+                            <td>${dataPro[i].price}</td>
+                            <td>${dataPro[i].ownerName}</td>
+                            <td>${dataPro[i].phone}</td>
+                            <td>${dataPro[i].notice}</td>
+                            <td><button onclick="updateData(${i})" id="update">Update</button></td>
+                            <td><button id="delete">Delete</button></td>
+    
+                        </tr>
+        `
+      }
+   }
+
+   }
+
+   document.getElementById('tbody').innerHTML=tabel;
+
+}
+
