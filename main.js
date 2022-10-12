@@ -13,9 +13,6 @@ let mood = "create";
 let temp;
 
 
-const d=new Date();
-document.getElementById("date").innerHTML=d.getTime();
-
 //get totol
 
 // function getTotal(){

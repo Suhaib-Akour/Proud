@@ -3,10 +3,60 @@
   padding: 0;
 }
 body {
+  padding-top:5%;
   background: #fdf5df;
   color: rgb(61, 63, 38);
   font-family: system-ui;
+  
 }
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+nav ul {
+  padding: 0px;
+  margin: 0px;
+  background: #86a124;
+  list-style: none;
+  text-align: right;
+  max-width: 100%;
+  min-width: 400px;
+}
+.navbar li {
+  display: inline-block;
+}
+
+.navbar ul li a {
+  text-transform: uppercase;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-family: "Courier New", Courier, monospace;
+  display: block;
+  width: auto;
+  font-weight: bold;
+  color: #cfe473;
+  text-align: center;
+}
+@media only screen and (max-width: 450px) {
+  body {
+    padding-top:13%;
+    background: #fdf5df;
+    color: rgb(61, 63, 38);
+    font-family: system-ui;
+  }
+  .footer a,p {
+  font-size: 15px;
+  
+  }
+  
+}
+
+.navbar a:hover {
+  background-color: #fdf5df;
+}
+
 .crud {
   width: 80%;
   margin: auto;
@@ -21,7 +71,7 @@ body {
 input {
   width: 100%;
   height: 30px;
-  outline:none;
+  outline: none;
   border: none;
   background: #aabb6f;
   margin: 4px 0;
@@ -29,6 +79,8 @@ input {
   border-radius: 7px;
   padding: 4px;
   text-align: right;
+  max-width: 100%;
+  min-width: 300px;
 }
 input:focus {
   background: rgb(69, 85, 12);
@@ -38,17 +90,40 @@ input:focus {
 input:focus::placeholder {
   color: #aabb6f;
 }
-.price input {
-  width: 20%;
+footer{
+  background-color: #86a124;
+  padding: 0;
+  margin: 0;
+  
+
+ 
+
 }
-#total {
-  background-color: #f10;
-  padding: 5px 3px;
-  border-radius: 4px;
+
+ .footer div {
+ text-align: center;
+  max-width: 100%;
+  min-width: 400px;
 }
-#total::before {
-  content: "Total:";
-}
+
+.footer a,p {
+  text-decoration: none;
+  padding: 20px 20px;
+  text-transform: uppercase;
+  color: #cfe473;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+}/*
+.footer p {
+  text-decoration: none;
+  padding: 20px 20px;
+  text-transform: uppercase;
+  color: #cfe473;
+  font-weight: bold;
+  text-align: center;
+  display: inline; 
+}*/
 button {
   width: 100%;
   height: 30px;
@@ -93,6 +168,6 @@ table button {
   color: rgb(66, 80, 18);
   font-size: 18px;
 }
-.table-section{
+.table-section {
   overflow-x: auto;
 }

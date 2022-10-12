@@ -8,17 +8,25 @@
     <link rel="stylesheet" href="stayl.css" />
   </head>
   <body>
-    <header><span id="date"></span></header>
+    <header>
+      <div class="navbar">
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#a">About</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Gallery</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <div class="crud">
       <div class="head">
         <h2>عــــقــــــاراتــــي</h2>
-        <p>للاراضي والشقق والاسكانات</p>
+        <h6>للاراضي والشقق والاسكانات</h6>
       </div>
 
       <div class="input">
-        <select name="" id="">
-          <option value="aa"></option>
-         </select>
         <input placeholder="القرية" type="text" id="country" />
         <input placeholder="رقم الحوض" type="number" id="hodNum" />
         <input placeholder="اسم الحوض" type="text" id="hodName" />
@@ -33,7 +41,7 @@
             <input onkeyup="getTotal()" type="number" id="discount" placeholder="discount">
             <small id="total"></small>
           </div> -->
-        <input placeholder=ط" type="text" id="ownerName" />
+        <input placeholder="اسم المالك" type="text" id="ownerName" />
         <input placeholder="رقم الهاتف" type="number" id="phone" />
         <input placeholder="ملاحظات" type="text" id="notice" />
         <button id="submit">Create</button>
@@ -47,7 +55,6 @@
             placeholder="بحث "
           />
           <!-- <input onkeyup="serachData(this.value)" type="text" id="search" placeholder="Search" /> -->
-          
         </div>
         <div class="table-section">
           <table>
@@ -65,18 +72,23 @@
               <th>update</th>
               <th>Delete</th>
             </tr>
-  
+
             <tbody id="tbody"></tbody>
           </table>
         </div>
-      
       </div>
     </div>
 
-    <footer>
-      <a href="https://www.facebook.com/sohayb.akour/" target="_blank">FaceBook</a>
+    <footer class="footer">
+      <div class="foot">
+        <a href="https://www.facebook.com/sohayb.akour/" target="_blank"
+          >FaceBook</a
+        >
+        <p>phone:0795901808</p>
+      
+        
+      </div>
     </footer>
-    
 
     <script src="main.js"></script>
   </body>
